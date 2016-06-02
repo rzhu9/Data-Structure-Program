@@ -1,0 +1,428 @@
+/*******************************************************************************
+File:             Questions.txt
+
+Author:           Aren Lorenson aren
+                  Ruihao Zhu rzhu9
+
+Completion Date:  14.14.14
+
+Course:           CS 367, Spring 2014
+*******************************************************************************/
+Directions: answer the following five (5) questions.  Note: some of the 
+questions may require you to know how the LinkedList class is implemented; in 
+these cases, you should make a reasonable assumption and clearly indicate your
+assumptions in your answer.
+
+1) Suppose you insert an item into your hashtable and then immediately do a 
+lookup on that item.  What is the worst-case complexity of your program for 
+the lookup in this situation?  Briefly explain your answer.
+
+Answer: O(tableSize); We'd have to iterate through every index of our
+hash table in the event we hash to the highest index LinkedList.
+
+
+For questions 2 - 4, you should use the TestHash program as written.
+
+2) In this question you will run MapBenchmark three times using the parameters 
+indicated below:
+	run1		 randIn1000.txt 100
+	run2		 randIn2000.txt 100
+	run3 		randIn10000.txt 100
+
+What is the output for each of the runs?  
+
+Answer:
+
+HashMap: get		
+--------------------
+Min : 0
+Max : 4
+Mean : 1.26
+Std Dev : 0.923
+ 
+HashMap: put
+--------------------
+Min : 0
+Max : 5
+Mean : 0.2
+Std Dev : 0.707
+ 
+HashMap: floorKey
+--------------------
+Min : 0
+Max : 8
+Mean : 2.48
+Std Dev : 1.808
+ 
+HashMap: remove
+--------------------
+Min : 0
+Max : 3
+Mean : 0.97
+Std Dev : 0.932
+ 
+TreeMap: get
+--------------------
+Min : 0
+Max : 0
+Mean : 0.0
+Std Dev : 0.0
+ 
+TreehMap: put
+--------------------
+Min : 0
+Max : 6
+Mean : 0.32
+Std Dev : 0.747
+ 
+TreeMap: floorKey
+--------------------
+Min : 0
+Max : 0
+Mean : 0.0
+Std Dev : 0.0
+ 
+TreeMap: remove
+--------------------
+Min : 0
+Max : 1
+Mean : 0.01
+Std Dev : 0.099
+
+RUN2:
+
+HashMap: get
+--------------------
+Min : 0
+Max : 65
+Mean : 20.88
+Std Dev : 17.272
+ 
+HashMap: put
+--------------------
+Min : 0
+Max : 6
+Mean : 0.45
+Std Dev : 0.973
+ 
+HashMap: floorKey
+--------------------
+Min : 0
+Max : 69
+Mean : 23.66
+Std Dev : 18.686
+ 
+HashMap: remove
+--------------------
+Min : 0
+Max : 62
+Mean : 20.73
+Std Dev : 17.079
+ 
+TreeMap: get
+--------------------
+Min : 0
+Max : 0
+Mean : 0.0
+Std Dev : 0.0
+ 
+TreehMap: put
+--------------------
+Min : 0
+Max : 15
+Mean : 0.65
+Std Dev : 1.602
+ 
+TreeMap: floorKey
+--------------------
+Min : 0
+Max : 0
+Mean : 0.0
+Std Dev : 0.0
+ 
+TreeMap: remove
+--------------------
+Min : 0
+Max : 1
+Mean : 0.01
+Std Dev : 0.099
+
+RUN3:
+
+HashMap: get
+--------------------
+Min : 0
+Max : 31
+Mean : 11.47
+Std Dev : 7.683
+ 
+HashMap: put
+--------------------
+Min : 0
+Max : 5
+Mean : 0.99
+Std Dev : 1.082
+ 
+HashMap: floorKey
+--------------------
+Min : 0
+Max : 61
+Mean : 23.13
+Std Dev : 15.312
+ 
+HashMap: remove
+--------------------
+Min : 0
+Max : 30
+Mean : 11.65
+Std Dev : 7.669
+ 
+TreeMap: get
+--------------------
+Min : 0
+Max : 0
+Mean : 0.0
+Std Dev : 0.0
+ 
+TreehMap: put
+--------------------
+Min : 0
+Max : 18
+Mean : 2.43
+Std Dev : 2.151
+ 
+TreeMap: floorKey
+--------------------
+Min : 0
+Max : 1
+Mean : 0.01
+Std Dev : 0.099
+ 
+TreeMap: remove
+--------------------
+Min : 0
+Max : 1
+Mean : 0.01
+Std Dev : 0.099
+ 
+
+3) In this question you will again run TestHash three times, this time using the 
+parameters:
+	run4		 badIn1000.txt 100
+	run5		 badIn2000.txt 100
+	run6 		badIn10000.txt 100
+
+What is the output for each of the runs?  
+
+RUN4
+
+HashMap: get
+--------------------
+Min : 0
+Max : 18
+Mean : 5.3
+Std Dev : 4.599
+ 
+HashMap: put
+--------------------
+Min : 0
+Max : 5
+Mean : 0.24
+Std Dev : 0.65
+ 
+HashMap: floorKey
+--------------------
+Min : 0
+Max : 21
+Mean : 6.4
+Std Dev : 5.307
+ 
+HashMap: remove
+--------------------
+Min : 0
+Max : 16
+Mean : 4.85
+Std Dev : 4.59
+ 
+TreeMap: get
+--------------------
+Min : 0
+Max : 1
+Mean : 0.01
+Std Dev : 0.099
+ 
+TreehMap: put
+--------------------
+Min : 0
+Max : 6
+Mean : 0.39
+Std Dev : 0.786
+ 
+TreeMap: floorKey
+--------------------
+Min : 0
+Max : 1
+Mean : 0.02
+Std Dev : 0.14
+ 
+TreeMap: remove
+--------------------
+Min : 0
+Max : 0
+Mean : 0.0
+Std Dev : 0.0
+
+RUN5
+
+HashMap: get
+--------------------
+Min : 0
+Max : 37
+Mean : 8.37
+Std Dev : 7.888
+ 
+HashMap: put
+--------------------
+Min : 0
+Max : 9
+Mean : 0.38
+Std Dev : 1.112
+ 
+HashMap: floorKey
+--------------------
+Min : 0
+Max : 43
+Mean : 11.22
+Std Dev : 9.221
+ 
+HashMap: remove
+--------------------
+Min : 0
+Max : 37
+Mean : 8.41
+Std Dev : 7.941
+ 
+TreeMap: get
+--------------------
+Min : 0
+Max : 0
+Mean : 0.0
+Std Dev : 0.0
+ 
+TreehMap: put
+--------------------
+Min : 0
+Max : 6
+Mean : 0.55
+Std Dev : 0.887
+ 
+TreeMap: floorKey
+--------------------
+Min : 0
+Max : 0
+Mean : 0.0
+Std Dev : 0.0
+ 
+TreeMap: remove
+--------------------
+Min : 0
+Max : 0
+Mean : 0.0
+Std Dev : 0.0
+
+RUN6
+
+HashMap: get
+--------------------
+Min : 0
+Max : 145
+Mean : 39.62
+Std Dev : 29.462
+ 
+HashMap: put
+--------------------
+Min : 0
+Max : 9
+Mean : 0.9
+Std Dev : 1.196
+ 
+HashMap: floorKey
+--------------------
+Min : 0
+Max : 172
+Mean : 50.48
+Std Dev : 36.166
+ 
+HashMap: remove
+--------------------
+Min : 0
+Max : 151
+Mean : 39.75
+Std Dev : 29.72
+ 
+TreeMap: get
+--------------------
+Min : 0
+Max : 0
+Mean : 0.0
+Std Dev : 0.0
+ 
+TreehMap: put
+--------------------
+Min : 0
+Max : 17
+Mean : 2.64
+Std Dev : 2.076
+ 
+TreeMap: floorKey
+--------------------
+Min : 0
+Max : 0
+Mean : 0.0
+Std Dev : 0.0
+ 
+TreeMap: remove
+--------------------
+Min : 0
+Max : 1
+Mean : 0.01
+Std Dev : 0.099
+
+4) Briefly analyze your results from questions 2 and 3. Consider the 
+following aspects:
+	- underlying data structure
+	- the number of inputs
+	- the input file
+How do these aspects influence the statistics? How do the table statistics 
+affect the performance (times)? 
+
+Answer: The hashMap is more efficient b/c a good hash function can provide
+O(1) access to any key-value pair, by placing ea. at their own index, 
+where as the average performance for
+the TreeMap is dependent on the ability to access nodes, which is an O(logN)
+traversal of the height of the tree. The TreeMap is less variable, however.
+It will outperform a HashMap that experiences O(N) efficiency in the WC
+when the keys hash repeatedly to the same place.
+
+5) Using the above data, give the complexity of each SimpleMapADT method for 
+SimpleTreeMap and SimpleHashMap.  Justify your answer with your run results.
+
+Answer:
+
+TreeMaps:
+get- (logN)
+put- (logN)
+remove- O(logN)
+floorKey- O(LogN)
+Get,put, floorKey and remove take longer on average as we hash more key-value pairs.
+
+HashMaps:
+get- (1)
+put- (1)
+remove- O(1)
+floorKey- O(1) 
+Get,put, and remove are independent of time as we hash more key-value pairs.
+For bad hashes: there is proportionality between the time taken and the size
+of the file. Because floorKey requires treaversal of one index of the hash table,
+it too is dependent on how well the data is hashed and can take from O(1) to
+O(N) time.
